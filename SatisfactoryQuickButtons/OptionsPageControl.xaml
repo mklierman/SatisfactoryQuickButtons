@@ -1,0 +1,47 @@
+<UserControl x:Class="SatisfactoryQuickButtons.OptionsPageControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Satisfactory Quick Buttons Settings" 
+                   FontSize="16" FontWeight="Bold" Margin="0,0,0,20"/>
+
+        <GroupBox Grid.Row="1" Header="Notifications" Margin="0,0,0,10">
+            <StackPanel Margin="10">
+                <CheckBox x:Name="EnableToastNotificationsCheckBox" 
+                          Content="Enable Toast Notifications"
+                          IsChecked="{Binding EnableToastNotifications}"
+                          Margin="0,5"/>
+                <TextBlock Text="Show Windows toast notifications when builds complete" 
+                           Foreground="Gray" 
+                           FontSize="11" 
+                           Margin="20,0,0,10"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Label Content="Notification Duration (seconds):" 
+                           VerticalAlignment="Center" 
+                           Width="200"/>
+                    <TextBox x:Name="NotificationDurationTextBox" 
+                             Text="{Binding NotificationDurationSeconds, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             Width="100" 
+                             VerticalAlignment="Center"/>
+                </StackPanel>
+                <TextBlock Text="How long notifications should be displayed (1-60 seconds)" 
+                           Foreground="Gray" 
+                           FontSize="11" 
+                           Margin="20,0,0,5"/>
+            </StackPanel>
+        </GroupBox>
+
+    </Grid>
+</UserControl>
+
