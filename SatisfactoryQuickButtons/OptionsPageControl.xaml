@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="600">
-    <Grid Margin="10">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" 
+                  HorizontalScrollBarVisibility="Auto">
+        <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -105,33 +107,26 @@
         </GroupBox>
 
         <GroupBox Grid.Row="4" Header="Copy Mod DLLs" Margin="0,0,0,10">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0"
-                           Text="Selected mods' DLLs and PDBs will be automatically copied to the above install directories" 
+            <StackPanel>
+                <TextBlock Text="Selected mods' DLLs and PDBs will be automatically copied to the above install directories" 
                            Foreground="Gray" 
                            FontSize="11" 
                            Margin="10,10,10,10"/>
-                <ScrollViewer Grid.Row="1"
-                              VerticalScrollBarVisibility="Auto" 
-                              VerticalAlignment="Stretch"
-                              HorizontalAlignment="Stretch">
-                    <ItemsControl x:Name="ModsItemsControl" ItemsSource="{Binding ModItems}" Margin="10">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <CheckBox Content="{Binding Name}" 
-                                          IsChecked="{Binding IsEnabled, Mode=TwoWay}" 
-                                          Margin="0,3"/>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </ScrollViewer>
-            </Grid>
+                <ItemsControl x:Name="ModsItemsControl" 
+                              ItemsSource="{Binding ModItems}" 
+                              Margin="10">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <CheckBox Content="{Binding Name}" 
+                                      IsChecked="{Binding IsEnabled, Mode=TwoWay}" 
+                                      Margin="0,3"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
         </GroupBox>
 
-    </Grid>
+        </Grid>
+    </ScrollViewer>
 </UserControl>
 
