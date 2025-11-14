@@ -42,6 +42,58 @@
             </StackPanel>
         </GroupBox>
 
+        <GroupBox Grid.Row="2" Header="Mod dlls to copy" Margin="0,0,0,10">
+            <StackPanel Margin="10">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <Label Content="Satisfactory Steam Install Location:" 
+                           VerticalAlignment="Center" 
+                           Width="250"/>
+                    <TextBox x:Name="SatisfactorySteamInstallLocationTextBox" 
+                             Text="{Binding SatisfactorySteamInstallLocation, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Stretch"
+                             MinWidth="400"
+                             Margin="5,0,0,0"/>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <Label Content="Satisfactory Epic Install Location:" 
+                           VerticalAlignment="Center" 
+                           Width="250"/>
+                    <TextBox x:Name="SatisfactoryEpicInstallLocationTextBox" 
+                             Text="{Binding SatisfactoryEpicInstallLocation, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Stretch"
+                             MinWidth="400"
+                             Margin="5,0,0,0"/>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Label Content="Satisfactory Server Windows Install Location:" 
+                           VerticalAlignment="Center" 
+                           Width="250"/>
+                    <TextBox x:Name="SatisfactoryServerWindowsInstallLocationTextBox" 
+                             Text="{Binding SatisfactoryServerWindowsInstallLocation, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Stretch"
+                             MinWidth="400"
+                             Margin="5,0,0,0"/>
+                </StackPanel>
+                
+                <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="300">
+                    <ItemsControl x:Name="ModsItemsControl" ItemsSource="{Binding ModItems}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Name}" 
+                                          IsChecked="{Binding IsEnabled, Mode=TwoWay}" 
+                                          Margin="0,3"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </StackPanel>
+        </GroupBox>
+
     </Grid>
 </UserControl>
 

@@ -79,6 +79,11 @@ namespace SatisfactoryQuickButtons
 						_ = Task.Run(async () =>
 						{
 							await BuildNotificationHelper.ShowBuildNotificationAsync(package, buildName, buildSucceeded);
+							
+							if (buildSucceeded)
+							{
+								await ModFileCopier.CopyModFilesAfterBuildAsync(package, buildName, buildSucceeded);
+							}
 						});
 
 						registeredBuilds.Remove(projectName);
