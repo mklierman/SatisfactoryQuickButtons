@@ -111,7 +111,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Row="0"
-                           Text="Selected mods DLLs and PDBs will be automatically copied to the above install directory(s)" 
+                           Text="Selected mods' DLLs and PDBs will be automatically copied to the above install directories" 
                            Foreground="Gray" 
                            FontSize="11" 
                            Margin="10,10,10,10"/>
