@@ -82,6 +82,10 @@ namespace SatisfactoryQuickButtons
 			await LaunchEditorCommand.InitializeAsync(this);
 			await BuildServerWin64Command.InitializeAsync(this);
 			await BuildServerLinuxCommand.InitializeAsync(this);
+			await LaunchSteamCommand.InitializeAsync(this);
+			await LaunchEpicCommand.InitializeAsync(this);
+			await LaunchWinServerCommand.InitializeAsync(this);
+			await LaunchScriptCommand.InitializeAsync(this);
 		}
 
 

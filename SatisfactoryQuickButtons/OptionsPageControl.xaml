@@ -10,6 +10,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -43,14 +44,14 @@
             </StackPanel>
         </GroupBox>
 
-        <GroupBox Grid.Row="2" Header="Install Locations" Margin="0,0,0,10">
+        <GroupBox Grid.Row="2" Header="Install Directories" Margin="0,0,0,10">
             <StackPanel Margin="10">
                 <TextBlock Text="Used for copying DLLs and Launching Satisfactory" 
                            Foreground="Gray" 
                            FontSize="11" 
                            Margin="0,0,0,10"/>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                    <Label Content="Satisfactory Steam Install Location:" 
+                    <Label Content="Satisfactory Steam Install Directory:" 
                            VerticalAlignment="Center" 
                            Width="250"/>
                     <TextBox x:Name="SatisfactorySteamInstallLocationTextBox" 
@@ -62,7 +63,7 @@
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                    <Label Content="Satisfactory Epic Install Location:" 
+                    <Label Content="Satisfactory Epic Install Directory:" 
                            VerticalAlignment="Center" 
                            Width="250"/>
                     <TextBox x:Name="SatisfactoryEpicInstallLocationTextBox" 
@@ -74,7 +75,7 @@
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
-                    <Label Content="Satisfactory Server Windows Install Location:" 
+                    <Label Content="Satisfactory Server Windows Install Directory:" 
                            VerticalAlignment="Center" 
                            Width="250"/>
                     <TextBox x:Name="SatisfactoryServerWindowsInstallLocationTextBox" 
@@ -87,14 +88,30 @@
             </StackPanel>
         </GroupBox>
 
-        <GroupBox Grid.Row="3" Header="Copy Mod DLLs" Margin="0,0,0,10">
+        <GroupBox Grid.Row="3" Header="Script" Margin="0,0,0,10">
+            <StackPanel Margin="10">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                    <Label Content="Launch Script Path:" 
+                           VerticalAlignment="Center" 
+                           Width="250"/>
+                    <TextBox x:Name="LaunchScriptPathTextBox" 
+                             Text="{Binding LaunchScriptPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Stretch"
+                             MinWidth="400"
+                             Margin="5,0,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="4" Header="Copy Mod DLLs" Margin="0,0,0,10">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Row="0"
-                           Text="Selected mods DLLs and PDBs will be automatically copied to the above install location(s)" 
+                           Text="Selected mods DLLs and PDBs will be automatically copied to the above install directory(s)" 
                            Foreground="Gray" 
                            FontSize="11" 
                            Margin="10,10,10,10"/>

@@ -112,6 +112,38 @@
           <ButtonText>Build Linux Server</ButtonText>
         </Strings>
       </Button>
+      <Button guid="guidSatisfactoryQuickButtonsPackageCmdSet" id="LaunchSteamId" priority="0x0106" type="Button">
+        <Parent guid="guidSatisfactoryQuickButtonsPackageCmdSet" id="SatisfactoryToolbarGroup" />
+        <CommandFlag>TextOnly</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Launch SF Steam</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidSatisfactoryQuickButtonsPackageCmdSet" id="LaunchEpicId" priority="0x0107" type="Button">
+        <Parent guid="guidSatisfactoryQuickButtonsPackageCmdSet" id="SatisfactoryToolbarGroup" />
+        <CommandFlag>TextOnly</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Launch SF Epic</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidSatisfactoryQuickButtonsPackageCmdSet" id="LaunchWinServerId" priority="0x0108" type="Button">
+        <Parent guid="guidSatisfactoryQuickButtonsPackageCmdSet" id="SatisfactoryToolbarGroup" />
+        <CommandFlag>TextOnly</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Launch Win Server</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidSatisfactoryQuickButtonsPackageCmdSet" id="LaunchScriptId" priority="0x0109" type="Button">
+        <Parent guid="guidSatisfactoryQuickButtonsPackageCmdSet" id="SatisfactoryToolbarGroup" />
+        <CommandFlag>TextOnly</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Launch Script</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
@@ -139,6 +171,10 @@
       <IDSymbol name="LaunchEditorId" value="0x0103" />
       <IDSymbol name="BuildServerWin64Id" value="0x0104" />
       <IDSymbol name="BuildServerLinuxId" value="0x0105" />
+      <IDSymbol name="LaunchSteamId" value="0x0106" />
+      <IDSymbol name="LaunchEpicId" value="0x0107" />
+      <IDSymbol name="LaunchWinServerId" value="0x0108" />
+      <IDSymbol name="LaunchScriptId" value="0x0109" />
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{412c54d6-20a1-4cc3-84e3-a6ff7076a487}" >

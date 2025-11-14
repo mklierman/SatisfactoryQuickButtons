@@ -64,6 +64,10 @@
     <Compile Include="LaunchEditorCommand.cs" />
     <Compile Include="BuildServerWin64Command.cs" />
     <Compile Include="BuildServerLinuxCommand.cs" />
+    <Compile Include="LaunchSteamCommand.cs" />
+    <Compile Include="LaunchEpicCommand.cs" />
+    <Compile Include="LaunchWinServerCommand.cs" />
+    <Compile Include="LaunchScriptCommand.cs" />
     <Compile Include="BuildEventManager.cs" />
     <Compile Include="BuildNotificationHelper.cs" />
     <Compile Include="SatisfactorySolutionContext.cs" />

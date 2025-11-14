@@ -27,6 +27,7 @@ namespace SatisfactoryQuickButtons
 		private string satisfactorySteamInstallLocation = string.Empty;
 		private string satisfactoryEpicInstallLocation = string.Empty;
 		private string satisfactoryServerWindowsInstallLocation = string.Empty;
+		private string launchScriptPath = string.Empty;
 
 		/// <summary>
 		/// Gets or sets whether toast notifications are enabled
@@ -53,7 +54,7 @@ namespace SatisfactoryQuickButtons
 		}
 
 		[Category("Mods")]
-		[DisplayName("Satisfactory Steam Install Location")]
+		[DisplayName("Satisfactory Steam Install Directory")]
 		[Description("Path to the Satisfactory Steam game installation directory")]
 		public string SatisfactorySteamInstallLocation
 		{
@@ -62,7 +63,7 @@ namespace SatisfactoryQuickButtons
 		}
 
 		[Category("Mods")]
-		[DisplayName("Satisfactory Epic Install Location")]
+		[DisplayName("Satisfactory Epic Install Directory")]
 		[Description("Path to the Satisfactory Epic game installation directory")]
 		public string SatisfactoryEpicInstallLocation
 		{
@@ -71,12 +72,21 @@ namespace SatisfactoryQuickButtons
 		}
 
 		[Category("Mods")]
-		[DisplayName("Satisfactory Server Windows Install Location")]
+		[DisplayName("Satisfactory Server Windows Install Directory")]
 		[Description("Path to the Satisfactory Server Windows installation directory")]
 		public string SatisfactoryServerWindowsInstallLocation
 		{
 			get => satisfactoryServerWindowsInstallLocation;
 			set => satisfactoryServerWindowsInstallLocation = value ?? string.Empty;
+		}
+
+		[Category("Script")]
+		[DisplayName("Launch Script Path")]
+		[Description("Path to the launch script file")]
+		public string LaunchScriptPath
+		{
+			get => launchScriptPath;
+			set => launchScriptPath = value ?? string.Empty;
 		}
 
 		public ObservableCollection<ModItem> ModItems
