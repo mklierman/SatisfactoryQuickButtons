@@ -161,6 +161,12 @@ namespace SatisfactoryQuickButtons
 						if (item.Kind == EnvDTE.Constants.vsProjectItemKindPhysicalFolder ||
 							item.Kind == EnvDTE.Constants.vsProjectItemKindVirtualFolder)
 						{
+							if (item.Name.Equals("AccessTransformers", StringComparison.OrdinalIgnoreCase) ||
+								item.Name.Equals("Alpakit", StringComparison.OrdinalIgnoreCase))
+							{
+								continue;
+							}
+
 							var existingMod = modItems.FirstOrDefault(m => m.Name == item.Name);
 							if (existingMod == null)
 							{
