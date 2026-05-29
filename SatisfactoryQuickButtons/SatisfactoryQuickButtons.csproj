@@ -71,6 +71,7 @@
     <Compile Include="BuildEventManager.cs" />
     <Compile Include="BuildNotificationHelper.cs" />
     <Compile Include="SatisfactorySolutionContext.cs" />
+    <Compile Include="SolutionBuildHelper.cs" />
     <Compile Include="ModItem.cs" />
     <Compile Include="ModFileCopier.cs" />
     <Compile Include="OptionsPage.cs">

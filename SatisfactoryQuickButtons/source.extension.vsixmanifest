@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="SatisfactoryQuickButtons.a586dd56-42d5-4d14-af6d-0d1909a0ad0b" Version="1.0" Language="en-US" Publisher="Sir Digby" />
+        <Identity Id="SatisfactoryQuickButtons.a586dd56-42d5-4d14-af6d-0d1909a0ad0b" Version="1.0.1" Language="en-US" Publisher="Sir Digby" />
         <DisplayName>SatisfactoryQuickButtons</DisplayName>
         <Description xml:space="preserve">A helper for Satisfactory Modding</Description>
     </Metadata>

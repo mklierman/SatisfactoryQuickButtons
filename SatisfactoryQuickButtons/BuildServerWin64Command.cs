@@ -207,41 +207,11 @@ namespace SatisfactoryQuickButtons
 				}
 				
 				string targetProjectFileName = System.IO.Path.GetFileName(project.UniqueName);
-				
-				string fullConfigName = $"{configurationName}|{targetPlatform}";
-				foreach (SolutionConfiguration2 solConfig in solution.SolutionBuild.SolutionConfigurations)
-				{
-					if (solConfig.Name.Equals(fullConfigName, StringComparison.OrdinalIgnoreCase))
-					{
-						config = solConfig;
-						break;
-					}
-				}
-				
-				if (config == null)
-				{
-					foreach (SolutionConfiguration2 solConfig in solution.SolutionBuild.SolutionConfigurations)
-					{
-						if (solConfig.Name.Equals(configurationName, StringComparison.OrdinalIgnoreCase) ||
-							solConfig.Name.StartsWith(configurationName + "|", StringComparison.OrdinalIgnoreCase))
-						{
-							foreach (SolutionContext context in solConfig.SolutionContexts)
-							{
-								string contextProjectFileName = System.IO.Path.GetFileName(context.ProjectName);
-								bool projectMatches = contextProjectFileName.Equals(targetProjectFileName, StringComparison.OrdinalIgnoreCase);
-								
-								if (projectMatches &&
-									(context.PlatformName.Equals(targetPlatform, StringComparison.OrdinalIgnoreCase) ||
-									 (context.PlatformName.Equals("x64", StringComparison.OrdinalIgnoreCase) && targetPlatform.Equals("Win64", StringComparison.OrdinalIgnoreCase))))
-								{
-									config = solConfig;
-									break;
-								}
-							}
-							if (config != null) break;
-						}
-					}
-				}
+				config = SolutionBuildHelper.FindSolutionConfiguration(
+					solution,
+					configurationName,
+					targetPlatform,
+					targetProjectFileName);
 
 				if (config == null)
 				{
